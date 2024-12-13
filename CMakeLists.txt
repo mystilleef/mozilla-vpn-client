@@ -90,7 +90,7 @@ if(APPLE)
     set(CMAKE_XCODE_ATTRIBUTE_GROUP_ID_IOS ${BUILD_IOS_GROUP_IDENTIFIER})
 
     if(IOS)
-        set(CMAKE_OSX_DEPLOYMENT_TARGET 14.0)
+        set(CMAKE_OSX_DEPLOYMENT_TARGET 15.0)
     else()
         set(CMAKE_OSX_DEPLOYMENT_TARGET 11.0)
     endif()
@@ -175,6 +175,9 @@ if(NOT CMAKE_CROSSCOMPILING)
 
         # E2E Tests
         add_subdirectory(tests/auth_tests EXCLUDE_FROM_ALL)
+
+        # Functional Tests
+        add_subdirectory(tests/functional)
     endif()
 endif()
 

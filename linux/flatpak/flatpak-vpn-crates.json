@@ -1003,19 +1003,6 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/hermit-abi/hermit-abi-0.3.9.crate",
-        "sha256": "d231dfb89cfffdbc30e7fc41579ed6066ad03abda9e567ccafae602b97ec5024",
-        "dest": "cargo/vendor/hermit-abi-0.3.9"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"d231dfb89cfffdbc30e7fc41579ed6066ad03abda9e567ccafae602b97ec5024\", \"files\": {}}",
-        "dest": "cargo/vendor/hermit-abi-0.3.9",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/hex/hex-0.4.3.crate",
         "sha256": "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70",
         "dest": "cargo/vendor/hex-0.4.3"
@@ -1354,14 +1341,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/libc/libc-0.2.155.crate",
-        "sha256": "97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c",
-        "dest": "cargo/vendor/libc-0.2.155"
+        "url": "https://static.crates.io/crates/libc/libc-0.2.167.crate",
+        "sha256": "09d6582e104315a817dff97f75133544b2e094ee22447d2acf4a74e189ba06fc",
+        "dest": "cargo/vendor/libc-0.2.167"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c\", \"files\": {}}",
-        "dest": "cargo/vendor/libc-0.2.155",
+        "contents": "{\"package\": \"09d6582e104315a817dff97f75133544b2e094ee22447d2acf4a74e189ba06fc\", \"files\": {}}",
+        "dest": "cargo/vendor/libc-0.2.167",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1497,14 +1484,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/mio/mio-1.0.2.crate",
-        "sha256": "80e04d1dcff3aae0704555fe5fee3bcfaf3d1fdf8a7e521d5b9d2b42acb52cec",
-        "dest": "cargo/vendor/mio-1.0.2"
+        "url": "https://static.crates.io/crates/mio/mio-1.0.3.crate",
+        "sha256": "2886843bf800fba2e3377cff24abf6379b4c4d5c6681eaf9ea5b0d15090450bd",
+        "dest": "cargo/vendor/mio-1.0.3"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"80e04d1dcff3aae0704555fe5fee3bcfaf3d1fdf8a7e521d5b9d2b42acb52cec\", \"files\": {}}",
-        "dest": "cargo/vendor/mio-1.0.2",
+        "contents": "{\"package\": \"2886843bf800fba2e3377cff24abf6379b4c4d5c6681eaf9ea5b0d15090450bd\", \"files\": {}}",
+        "dest": "cargo/vendor/mio-1.0.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2407,14 +2394,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/thiserror/thiserror-2.0.3.crate",
-        "sha256": "c006c85c7651b3cf2ada4584faa36773bd07bac24acfb39f3c431b36d7e667aa",
-        "dest": "cargo/vendor/thiserror-2.0.3"
+        "url": "https://static.crates.io/crates/thiserror/thiserror-2.0.6.crate",
+        "sha256": "8fec2a1820ebd077e2b90c4df007bebf344cd394098a13c563957d0afc83ea47",
+        "dest": "cargo/vendor/thiserror-2.0.6"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"c006c85c7651b3cf2ada4584faa36773bd07bac24acfb39f3c431b36d7e667aa\", \"files\": {}}",
-        "dest": "cargo/vendor/thiserror-2.0.3",
+        "contents": "{\"package\": \"8fec2a1820ebd077e2b90c4df007bebf344cd394098a13c563957d0afc83ea47\", \"files\": {}}",
+        "dest": "cargo/vendor/thiserror-2.0.6",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2433,14 +2420,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/thiserror-impl/thiserror-impl-2.0.3.crate",
-        "sha256": "f077553d607adc1caf65430528a576c757a71ed73944b66ebb58ef2bbd243568",
-        "dest": "cargo/vendor/thiserror-impl-2.0.3"
+        "url": "https://static.crates.io/crates/thiserror-impl/thiserror-impl-2.0.6.crate",
+        "sha256": "d65750cab40f4ff1929fb1ba509e9914eb756131cef4210da8d5d700d26f6312",
+        "dest": "cargo/vendor/thiserror-impl-2.0.6"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"f077553d607adc1caf65430528a576c757a71ed73944b66ebb58ef2bbd243568\", \"files\": {}}",
-        "dest": "cargo/vendor/thiserror-impl-2.0.3",
+        "contents": "{\"package\": \"d65750cab40f4ff1929fb1ba509e9914eb756131cef4210da8d5d700d26f6312\", \"files\": {}}",
+        "dest": "cargo/vendor/thiserror-impl-2.0.6",
         "dest-filename": ".cargo-checksum.json"
     },
     {

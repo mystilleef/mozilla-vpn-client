@@ -19,13 +19,11 @@
 #include "glean/generated/metrics.h"
 #include "glean/generated/pings.h"
 #include "glean/mzglean.h"
-#include "i18nstrings.h"
 #include "inspector/inspectorhandler.h"
 #include "leakdetector.h"
 #include "localizer.h"
 #include "logger.h"
 #include "loghandler.h"
-#include "logoutobserver.h"
 #include "models/device.h"
 #include "models/devicemodel.h"
 #include "models/keys.h"
@@ -1265,6 +1263,15 @@ void MozillaVPN::registerUrlOpenerLabels() {
         settingsHolder->captivePortalIpv4Addresses().isEmpty()
             ? "127.0.0.1"
             : settingsHolder->captivePortalIpv4Addresses().first());
+  });
+
+  uo->registerUrlLabel("downloadExtension", []() -> QString {
+    // TODO: This link MUST be updated with a link to our extension
+    return "https://addons.mozilla.org/en-US/firefox/";
+  });
+
+  uo->registerUrlLabel("downloadFirefox", []() -> QString {
+    return "https://www.mozilla.org/firefox/new/";
   });
 
   uo->registerUrlLabel("inspector", []() -> QString {

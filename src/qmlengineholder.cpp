@@ -17,7 +17,6 @@
 #include "frontend/navigator.h"
 #include "glean/generated/metrics.h"
 #include "glean/generated/pings.h"
-#include "glean/mzglean.h"
 #include "leakdetector.h"
 #include "localizer.h"
 #include "loghandler.h"
@@ -129,10 +128,22 @@ bool QmlEngineHolder::hasWindow() const {
 void QmlEngineHolder::showWindow() {
   QWindow* w = window();
   Q_ASSERT(w);
+  if (!w) {
+    return;
+  }
 
   w->show();
-  w->raise();
+
   w->requestActivate();
+#ifdef MZ_WINDOWS
+  auto const windowHandle = (HWND)w->winId();
+  SetWindowPos(windowHandle, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+  SetForegroundWindow(windowHandle);
+  SetWindowPos(windowHandle, HWND_NOTOPMOST, 0, 0, 0, 0,
+               SWP_NOMOVE | SWP_NOSIZE);
+#else
+  w->raise();
+#endif
 }
 
 void QmlEngineHolder::hideWindow() {

@@ -24,8 +24,8 @@ set_target_properties(prod_addon PROPERTIES EXCLUDE_FROM_ALL FALSE)
 # Build the addons for testing.
 add_custom_target(test_01_empty_manifest
     COMMAND ${CMAKE_COMMAND} -E copy_directory
-                ${CMAKE_CURRENT_SOURCE_DIR}/01_empty_manifest/
-                ${CMAKE_CURRENT_BINARY_DIR}/01_empty_manifest/
+                ${CMAKE_CURRENT_SOURCE_DIR}/01_empty_manifest
+                ${CMAKE_CURRENT_BINARY_DIR}/01_empty_manifest
 )
 set_target_properties(test_01_empty_manifest PROPERTIES EXCLUDE_FROM_ALL FALSE)
 
@@ -37,13 +37,13 @@ add_custom_target(test_02_broken_manifest
 set_target_properties(test_02_broken_manifest PROPERTIES EXCLUDE_FROM_ALL FALSE)
 
 add_addon_target(test_03_single_addon
-    OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/03_single_addon/
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/03_single_addon/
+    OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/03_single_addon
+    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/03_single_addon
 )
 set_target_properties(test_03_single_addon PROPERTIES EXCLUDE_FROM_ALL FALSE)
 
 add_addon_target(test_08_message_disabled
-    OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/08_message_disabled/
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/08_message_disabled/
+    OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/08_message_disabled
+    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/08_message_disabled
 )
 set_target_properties(test_08_message_disabled PROPERTIES EXCLUDE_FROM_ALL FALSE)

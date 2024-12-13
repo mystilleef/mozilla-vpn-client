@@ -26,12 +26,12 @@ least a manifest.json file. The properties of this JSON file are:
 | id | The ID of the add-on. It must match the file name | String | Yes |
 | name | The name of the add-on | String | Yes |
 | api_version | The version of the add-on framework | String | Yes |
-| type | One of the supported types (message, guide, ...) | String | Yes |
+| type | One of the supported types (message, replacer, ...) | String | Yes |
 | conditions | List of conditions to meet | Array of Condition objects | No |
 | state | Object describing the state of the addon | Collection of state objects | No |
 
 Based on the add-on type, extra properties can be in added. See the
-[guide](https://github.com/mozilla-mobile/mozilla-vpn-client/blob/main/docs/guides.md), [message](https://github.com/mozilla-mobile/mozilla-vpn-client/blob/main/docs/message.md), and [replacer](https://github.com/mozilla-mobile/mozilla-vpn-client/blob/main/docs/replacer.md) documentation.
+[message](./messages.md) and [replacer](./replacer.md) documentation.
 
 ## State Object
 
@@ -152,7 +152,14 @@ If you want to implement new add-ons, you need to follow these steps:
 
 1. Create a manifest in a separate folder in the `addons` directory of the mozilla VPN repository.
 2. Read and follow the documentation for the add-on type you want to implement.
-3. Build the CMake project in the `addons` directory.
+3. If new shared strings were added, process them so that strings are shown in the addon:
+`python ./scripts/utils/generate_shared_addon_xliff.py -i ./addons/strings.yaml -o ./3rdparty/i18n/en/addons/strings.xliff`
+(This step is not necessary, strictly speaking. This script is what will be run as new
+strings are ingested into l10n repo, and once the new strings have done a round trip to
+the l10n repo and then back to the client repo, the string will show up in the addon as
+expected. Manually running this script as part of the build process prevents the brand
+new addon from showing "vpn.newStringCategory.newString" until this round trip happens.)
+4. Build the CMake project in the `addons` directory.
 
 ```
 mkdir -p build-addons/
@@ -160,10 +167,10 @@ cmake -S <source>/addons -B build-addons -GNinja
 cmake --build build-addons
 ```
 
-4. Expose the generated build directory through a webservice. For example: `python3 -m http.server --directory build-addons/`
-5. Open the dev-menu from the get-help view and set a custom add-on URL: `http://localhost:8000/`
-6. Scroll down and disable the signature-addon feature from the dev-menu, list of features
-7. Be sure you are doing all of this using a staging environment
+5. Expose the generated build directory through a webservice. For example: `python3 -m http.server --directory build-addons/`
+6. Open the dev-menu from the get-help view and set a custom add-on URL: `http://localhost:8000/`
+7. Scroll down and disable the signature-addon feature from the dev-menu, list of features
+8. Be sure you are doing all of this using a staging environment
 
 If all has done correctly, you can see the app fetching the manifest.json (and
 not! the manifest.json.sig) resource from the webservice.

@@ -33,7 +33,7 @@
 #
 # String can contain just one specific type of argument, the short version number.
 # Add '%1' where the version should go. This will get replaced with the addons message's
-# 'shortVersion' (from manifeste.json), for instance '2.24'
+# 'shortVersion' (from manifest.json), for instance '2.24'
 #
 #
 # Strings that are no longer needed should be removed from this file.
@@ -51,6 +51,9 @@ commonStrings:
   generalUpdateContent:
     value: This update includes minor bug fixes, UI adjustments and other performance improvements.
     comment: Default update notes
+  generalUpdateBulletIntro:
+    value: "This update includes minor bug fixes, UI adjustments and other performance improvements, including:"
+    comment: Default update text before several bullet points with specific updates
   updateButton:
     value: Update now
     comment: Button label
@@ -60,14 +63,46 @@ commonStrings:
   getHelpButton:
     value: Get help
     comment: Button label
-  # tester:
-  #   value: shouldn't show up in translation file
-  #   comment: Label for `Get help` button
+  whatsNewTitle:
+    value: You’ve updated to Mozilla VPN %1
+    comment: Title for What's New message. %1 is replaced by the version number, such as 2.25
+  latestVersionSubtitle:
+    value: You’re using the latest version of Mozilla VPN.
+    comment: Subtitle for default What's New message
+  whatsNewClosing:
+    value: Thank you for installing the latest version!
+    comment: Closing for default What's New message
 
-# 224updateMessage:
-#   somethingSpecificJustToThisMessage:
-#     value: This is just an example
-#     comment: Use this as as template for strings that we expect to only use in one message.
+225updateMessage:
+  bullet1:
+    value: On iOS, enhanced stability and reliability for VPN connections.
+    comment: First bullet point with a specific update in 2.25
+  bullet2:
+    value: On Android, added step-by-step instructions to enable VPN connection on startup.
+    comment: Second bullet point with a specific update in 2.25
 
-# These sample commented out translations can be used in testing, to ensure this is working as expected. Feel free to remove in
-# the near future, when this file has more translations.
+tryFirefoxExtension:
+  title:
+    value: Try the Firefox extension
+    comment: Title for message
+  subtitle:
+    value: Personalize your VPN protections to meet your web browsing needs.
+    comment: Subtitle for message
+  bullet1:
+    value: Turn off VPN for specific websites
+    comment: First bullet point
+  bullet2:
+    value: Set different locations for different websites, to see the web as you prefer
+    comment: Second bullet point
+  bullet3:
+    value: Keep protection for Firefox on, even when the Mozilla VPN app is off
+    comment: Third bullet point
+  finalLine:
+    value: Not using Firefox to browse? Give it a try.
+    comment: Final 'call to action' line of message
+  getExtension:
+    value: Get the extension
+    comment: Button label
+  downloadFirefox:
+    value: Download Firefox
+    comment: Button label
